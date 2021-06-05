@@ -1,0 +1,23 @@
+mode: "dev"
+port: 8080
+
+log:
+    level: "debug"
+    filename: "./blockchainguide_app.log"
+    max_size: 1000
+    max_age: 3600
+    max_backups: 5
+
+mysql:
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password: Zy19970606
+    db: blockchainguide
+    max_open_conns: 100
+    max_idle_conns: 20
+
+redis:
+    host: 127.0.0.1
+    port: 6379
+    db: 0
