@@ -55,3 +55,8 @@
 {"level":"ERROR","time":"2021-06-05T21:36:54.043+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
 {"level":"INFO","time":"2021-06-05T21:36:54.043+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000140335}
 {"level":"INFO","time":"2021-06-05T21:40:35.159+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000045917}
+{"level":"INFO","time":"2021-06-05T22:37:09.201+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-05T22:37:32.865+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.003648712}
+{"level":"INFO","time":"2021-06-05T22:40:47.432+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-05T22:40:50.377+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000860711}
+{"level":"INFO","time":"2021-06-05T22:41:21.925+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.001512235}
