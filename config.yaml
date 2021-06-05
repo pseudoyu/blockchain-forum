@@ -1,5 +1,9 @@
+name: "blockchainguide"
 mode: "dev"
 port: 8080
+version: "v0.0.1"
+start_time: "2021-06-01"
+machin_id: 1
 
 log:
     level: "debug"

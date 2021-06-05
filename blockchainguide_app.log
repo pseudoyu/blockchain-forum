@@ -60,3 +60,15 @@
 {"level":"INFO","time":"2021-06-05T22:40:47.432+0800","caller":"logger/logger.go:44","msg":"init logger success"}
 {"level":"INFO","time":"2021-06-05T22:40:50.377+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000860711}
 {"level":"INFO","time":"2021-06-05T22:41:21.925+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.001512235}
+{"level":"INFO","time":"2021-06-05T23:04:21.772+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-05T23:04:51.700+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"ERROR","time":"2021-06-05T23:05:16.107+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-06-05T23:05:16.107+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000282775}
+{"level":"INFO","time":"2021-06-05T23:06:46.966+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"ERROR","time":"2021-06-05T23:06:57.083+0800","caller":"controller/user.go:19","msg":"SignUp with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2021-06-05T23:06:57.083+0800","caller":"logger/logger.go:77","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.00027983}
+{"level":"INFO","time":"2021-06-05T23:08:13.988+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-05T23:11:33.109+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-05T23:11:47.385+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-05T23:12:41.904+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-05T23:14:54.978+0800","caller":"logger/logger.go:44","msg":"init logger success"}
