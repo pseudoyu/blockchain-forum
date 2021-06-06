@@ -110,3 +110,4 @@
 {"level":"ERROR","time":"2021-06-06T15:30:51.152+0800","caller":"controller/user.go:75","msg":"logic.Login failed","username":"qw"}
 {"level":"INFO","time":"2021-06-06T15:50:16.221+0800","caller":"logger/logger.go:44","msg":"init logger success"}
 {"level":"INFO","time":"2021-06-06T15:52:35.812+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T16:06:25.578+0800","caller":"logger/logger.go:44","msg":"init logger success"}
