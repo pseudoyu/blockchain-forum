@@ -2,6 +2,7 @@ package routers
 
 import (
 	"blockchainguide_app/controller"
+	"blockchainguide_app/logger"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -9,9 +10,14 @@ import (
 
 func SetupRouter() *gin.Engine {
 	//gin.SetMode(gin.ReleaseMode)
-	//r := gin.New()
-	//r.Use(logger.GinLogger(), logger.GinRecovery(true))
-	r := gin.Default()
+	r := gin.New()
+	r.Use(logger.GinLogger(), logger.GinRecovery(true))
+	//r := gin.Default()
+	r.LoadHTMLFiles("templates/index.html")
+	r.Static("/static", "./static")
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
 	v1 := r.Group("/api/v1")
 	v1.POST("/login", controller.LoginHandler)
 	v1.POST("/signup", controller.SignUpHandler)
