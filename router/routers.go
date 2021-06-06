@@ -22,12 +22,21 @@ func Setup(mode string) *gin.Engine {
 
 	// 注册业务路由
 	v1.POST("/signup", controller.SignUpHandler)
+
+	// 登录业务路由
 	v1.POST("/login", controller.LoginHandler)
 
-	v1.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
-		// 如果是登录用户，判断请求头中是否有JWT Token
-		c.String(http.StatusOK, "pong")
-	})
+	// 应用JWT认证中间件
+	v1.Use(middlewares.JWTAuthMiddleware())
+	{
+		v1.GET("/community", controller.CommunityHandler)
+		v1.GET("/community/:id", controller.CommunityDetailHandler)
+
+		v1.GET("/ping", func(c *gin.Context) {
+			c.String(http.StatusOK, "pong")
+		})
+
+	}
 
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{

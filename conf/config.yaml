@@ -5,6 +5,8 @@ version: "v0.0.1"
 start_time: "2021-06-01"
 machin_id: 1
 
+auth:
+    jwt_expire: 8760
 log:
     level: "debug"
     filename: "./blockchainguide_app.log"

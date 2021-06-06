@@ -111,3 +111,26 @@
 {"level":"INFO","time":"2021-06-06T15:50:16.221+0800","caller":"logger/logger.go:44","msg":"init logger success"}
 {"level":"INFO","time":"2021-06-06T15:52:35.812+0800","caller":"logger/logger.go:44","msg":"init logger success"}
 {"level":"INFO","time":"2021-06-06T16:06:25.578+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T17:00:13.146+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T17:18:30.754+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T17:25:57.835+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T17:26:10.833+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T17:42:28.674+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T17:59:51.040+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T18:05:06.818+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:02:51.174+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:03:50.548+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"ERROR","time":"2021-06-06T21:04:07.380+0800","caller":"controller/community.go:16","msg":"mysql.GetCommunityList() failed","error":"missing destination name community_id in *[]*models.Community"}
+{"level":"ERROR","time":"2021-06-06T21:04:09.813+0800","caller":"controller/community.go:16","msg":"mysql.GetCommunityList() failed","error":"missing destination name community_id in *[]*models.Community"}
+{"level":"ERROR","time":"2021-06-06T21:04:10.778+0800","caller":"controller/community.go:16","msg":"mysql.GetCommunityList() failed","error":"missing destination name community_id in *[]*models.Community"}
+{"level":"INFO","time":"2021-06-06T21:04:38.387+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:04:48.290+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:07:25.297+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:19:55.034+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:20:16.418+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:20:42.154+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:20:50.877+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:21:56.977+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:25:48.653+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:26:17.498+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T21:29:18.453+0800","caller":"logger/logger.go:44","msg":"init logger success"}
