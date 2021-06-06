@@ -5,12 +5,12 @@ package redis
 */
 
 const (
-	KeyPostInfoHashPrefix = "bluebell:post:"
-	KeyPostTimeZSet       = "bluebell:post:time"
-	KeyPostScoreZSet      = "bluebell:post:score"
+	KeyPostInfoHashPrefix = "blockchainguide:post:"
+	KeyPostTimeZSet       = "blockchainguide:post:time"
+	KeyPostScoreZSet      = "blockchainguide:post:score"
 	//KeyPostVotedUpSetPrefix   = "bluebell:post:voted:down:"
 	//KeyPostVotedDownSetPrefix = "bluebell:post:voted:up:"
-	KeyPostVotedZSetPrefix = "bluebell:post:voted:"
+	KeyPostVotedZSetPrefix = "blockchainguide:post:voted:"
 
-	KeyCommunityPostSetPrefix = "bluebell:community:"
+	KeyCommunityPostSetPrefix = "blockchainguide:community:"
 )

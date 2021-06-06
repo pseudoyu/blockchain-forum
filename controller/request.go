@@ -1,6 +1,8 @@
 package controller
 
-import "github.com/gin-gonic/gin"
+import (
+	"github.com/gin-gonic/gin"
+)
 
 func getCurrentUserID(c *gin.Context) (userID uint64, err error) {
 	_userID, ok := c.Get(ContextUserIDKey)
