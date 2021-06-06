@@ -3,6 +3,7 @@ package logic
 import (
 	"blockchainguide_app/dao/mysql"
 	"blockchainguide_app/models"
+	"blockchainguide_app/pkg/jwt"
 	"blockchainguide_app/pkg/snowflake"
 )
 
@@ -28,10 +29,17 @@ func SignUp(p *models.ParamSignUp) (err error) {
 }
 
 // Login 用户登录业务逻辑
-func Login(p *models.ParamLogin) error {
+func Login(p *models.ParamLogin) (token string, err error) {
 	user := &models.User{
 		Username: p.Username,
 		Password: p.Password,
 	}
-	return mysql.Login(user)
+
+	// 传递指针，拿到UserID
+	if err := mysql.Login(user); err != nil {
+		return "", err
+	}
+
+	// 生成JWT
+	return jwt.GenToken(user.UserID, user.Username)
 }

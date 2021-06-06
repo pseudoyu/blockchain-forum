@@ -3,6 +3,7 @@ package router
 import (
 	"blockchainguide_app/controller"
 	"blockchainguide_app/logger"
+	"blockchainguide_app/middlewares"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -22,7 +23,8 @@ func Setup(mode string) *gin.Engine {
 
 	r.POST("/login", controller.LoginHandler)
 
-	r.GET("/ping", func(c *gin.Context) {
+	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
+		// 如果是登录用户，判断请求头中是否有JWT Token
 		c.String(http.StatusOK, "pong")
 	})
 

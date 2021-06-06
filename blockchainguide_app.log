@@ -78,3 +78,13 @@
 {"level":"INFO","time":"2021-06-06T10:00:01.113+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000152087}
 {"level":"ERROR","time":"2021-06-06T10:00:10.077+0800","caller":"controller/user.go:61","msg":"Login with invalid param","error":"Key: 'ParamLogin.password' Error:Field validation for 'password' failed on the 'required' tag"}
 {"level":"INFO","time":"2021-06-06T10:00:10.077+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000154006}
+{"level":"INFO","time":"2021-06-06T11:59:56.536+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T13:50:53.862+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T13:54:13.152+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"ERROR","time":"2021-06-06T13:54:40.062+0800","caller":"controller/user.go:61","msg":"Login with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-06-06T13:54:40.062+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000223163}
+{"level":"ERROR","time":"2021-06-06T13:54:47.016+0800","caller":"controller/user.go:61","msg":"Login with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-06-06T13:54:47.016+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000115906}
+{"level":"INFO","time":"2021-06-06T13:55:06.525+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.001628852}
+{"level":"INFO","time":"2021-06-06T13:55:25.080+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000466836}
+{"level":"INFO","time":"2021-06-06T14:29:41.820+0800","caller":"logger/logger.go:44","msg":"init logger success"}
