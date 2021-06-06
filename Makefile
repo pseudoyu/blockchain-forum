@@ -1,6 +1,6 @@
 .PHONY: all build run gotool clean help
 
-BINARY="blockchainguide_app"
+BINARY="blockchainguide"
 
 all: gotool build
 
