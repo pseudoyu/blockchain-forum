@@ -7,7 +7,7 @@ import (
 	"go.uber.org/zap"
 )
 
-// ---- 跟社区相关的 ----
+// 社区
 
 // CommunityHandler 社区列表
 func CommunityHandler(c *gin.Context) {

@@ -49,7 +49,7 @@ func Init() error {
 
 	viper.WatchConfig()
 	viper.OnConfigChange(func(in fsnotify.Event) {
-		fmt.Println("Config file changed")
+		fmt.Println("夭寿啦~配置文件被人修改啦...")
 		viper.Unmarshal(&Conf)
 	})
 

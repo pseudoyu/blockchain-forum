@@ -1,24 +1,14 @@
 package controller
 
-import (
-	"errors"
+import "github.com/gin-gonic/gin"
 
-	"github.com/gin-gonic/gin"
-)
-
-const CtxUserIDKey = "userID"
-
-var ErrorUserNotLogin = errors.New("用户未登录")
-
-// getCurrentUser 获取当前登录的用户ID
-func getCurrentUser(c *gin.Context) (userID int64, err error) {
-	uid, ok := c.Get(CtxUserIDKey)
+func getCurrentUserID(c *gin.Context) (userID uint64, err error) {
+	_userID, ok := c.Get(ContextUserIDKey)
 	if !ok {
 		err = ErrorUserNotLogin
 		return
 	}
-
-	userID, ok = uid.(int64)
+	userID, ok = _userID.(uint64)
 	if !ok {
 		err = ErrorUserNotLogin
 		return

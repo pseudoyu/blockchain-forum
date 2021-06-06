@@ -1,17 +1,14 @@
 package main
 
 import (
-	"blockchainguide_app/controller"
 	"blockchainguide_app/dao/mysql"
 	"blockchainguide_app/dao/redis"
 	"blockchainguide_app/logger"
 	"blockchainguide_app/pkg/snowflake"
-	"blockchainguide_app/router"
+	"blockchainguide_app/routers"
 	"blockchainguide_app/settings"
 	"fmt"
 )
-
-// Go Web开发通用脚手架模板
 
 func main() {
 	//var confFile string
@@ -40,14 +37,8 @@ func main() {
 		fmt.Printf("init snowflake failed, err:%v\n", err)
 		return
 	}
-
-	// 初始化gin框架内置的翻译器
-	if err := controller.InitTrans("zh"); err != nil {
-		fmt.Printf("init trans failed, err:%v\n", err)
-		return
-	}
 	// 注册路由
-	r := router.Setup(settings.Conf.Mode)
+	r := routers.SetupRouter()
 	err := r.Run(fmt.Sprintf(":%d", settings.Conf.Port))
 	if err != nil {
 		fmt.Printf("run server failed, err:%v\n", err)

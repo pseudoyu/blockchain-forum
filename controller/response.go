@@ -7,31 +7,34 @@ import (
 )
 
 type ResponseData struct {
-	Code ResCode     `json:"code"`
-	Msg  interface{} `json:"msg"`
-	Data interface{} `json:"data"`
+	Code    MyCode      `json:"code"`
+	Message string      `json:"message"`
+	Data    interface{} `json:"data"`
 }
 
-func ResponseError(c *gin.Context, code ResCode) {
-	c.JSON(http.StatusOK, &ResponseData{
-		Code: code,
-		Msg:  code.Msg(),
-		Data: nil,
-	})
+func ResponseError(ctx *gin.Context, c MyCode) {
+	rd := &ResponseData{
+		Code:    c,
+		Message: c.Msg(),
+		Data:    nil,
+	}
+	ctx.JSON(http.StatusOK, rd)
 }
 
-func ResponseErrorWithMsg(c *gin.Context, code ResCode, msg interface{}) {
-	c.JSON(http.StatusOK, &ResponseData{
-		Code: code,
-		Msg:  msg,
-		Data: nil,
-	})
+func ResponseErrorWithMsg(ctx *gin.Context, code MyCode, errMsg string) {
+	rd := &ResponseData{
+		Code:    code,
+		Message: errMsg,
+		Data:    nil,
+	}
+	ctx.JSON(http.StatusOK, rd)
 }
 
-func ResponseSuccess(c *gin.Context, data interface{}) {
-	c.JSON(http.StatusOK, &ResponseData{
-		Code: CodeSuccess,
-		Msg:  CodeSuccess.Msg(),
-		Data: data,
-	})
+func ResponseSuccess(ctx *gin.Context, data interface{}) {
+	rd := &ResponseData{
+		Code:    CodeSuccess,
+		Message: CodeSuccess.Msg(),
+		Data:    data,
+	}
+	ctx.JSON(http.StatusOK, rd)
 }

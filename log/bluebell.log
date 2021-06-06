@@ -1,0 +1,4 @@
+{"level":"INFO","time":"2021-06-06T22:17:19.059+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T22:32:59.645+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"ERROR","time":"2021-06-06T22:33:13.169+0800","caller":"controller/user.go:48","msg":"mysql.Login(&u) failed","error":"用户不已存在"}
+{"level":"ERROR","time":"2021-06-06T22:35:49.909+0800","caller":"controller/user.go:48","msg":"mysql.Login(&u) failed","error":"用户不已存在"}
