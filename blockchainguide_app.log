@@ -72,3 +72,9 @@
 {"level":"INFO","time":"2021-06-05T23:11:47.385+0800","caller":"logger/logger.go:44","msg":"init logger success"}
 {"level":"INFO","time":"2021-06-05T23:12:41.904+0800","caller":"logger/logger.go:44","msg":"init logger success"}
 {"level":"INFO","time":"2021-06-05T23:14:54.978+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T09:59:26.879+0800","caller":"logger/logger.go:44","msg":"init logger success"}
+{"level":"INFO","time":"2021-06-06T09:59:46.086+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.031278554}
+{"level":"ERROR","time":"2021-06-06T10:00:01.113+0800","caller":"controller/user.go:61","msg":"Login with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2021-06-06T10:00:01.113+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000152087}
+{"level":"ERROR","time":"2021-06-06T10:00:10.077+0800","caller":"controller/user.go:61","msg":"Login with invalid param","error":"Key: 'ParamLogin.password' Error:Field validation for 'password' failed on the 'required' tag"}
+{"level":"INFO","time":"2021-06-06T10:00:10.077+0800","caller":"logger/logger.go:77","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.10","errors":"","cost":0.000154006}
