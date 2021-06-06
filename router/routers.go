@@ -2,7 +2,6 @@ package router
 
 import (
 	"blockchainguide_app/controller"
-	"blockchainguide_app/logger"
 	"blockchainguide_app/middlewares"
 	"net/http"
 
@@ -15,15 +14,17 @@ func Setup(mode string) *gin.Engine {
 		gin.SetMode(gin.ReleaseMode)
 	}
 
-	r := gin.New()
-	r.Use(logger.GinLogger(), logger.GinRecovery(true))
+	//r := gin.New()
+	//r.Use(logger.GinLogger(), logger.GinRecovery(true))
+
+	r := gin.Default()
+	v1 := r.Group("/api/v1")
 
 	// 注册业务路由
-	r.POST("/signup", controller.SignUpHandler)
+	v1.POST("/signup", controller.SignUpHandler)
+	v1.POST("/login", controller.LoginHandler)
 
-	r.POST("/login", controller.LoginHandler)
-
-	r.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
+	v1.GET("/ping", middlewares.JWTAuthMiddleware(), func(c *gin.Context) {
 		// 如果是登录用户，判断请求头中是否有JWT Token
 		c.String(http.StatusOK, "pong")
 	})
