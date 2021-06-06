@@ -1,10 +1,11 @@
 package controller
 
 import (
+	"blockchainguide_app/dao/mysql"
 	"blockchainguide_app/logic"
 	"blockchainguide_app/models"
+	"errors"
 	"fmt"
-	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
@@ -21,14 +22,10 @@ func SignUpHandler(c *gin.Context) {
 		// 判断err是不是validator.ValidationErrors类型
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			"msg": errs.Translate(trans), // 翻译错误
-		})
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		return
 	}
 
@@ -44,13 +41,16 @@ func SignUpHandler(c *gin.Context) {
 	fmt.Println(p)
 	// 2. 业务处理
 	if err := logic.SignUp(p); err != nil {
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "注册失败",
-		})
+		zap.L().Error("logic.SignUp failed", zap.Error(err))
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+			return
+		}
+		ResponseError(c, CodeServerBusy)
 		return
 	}
 	// 3. 返回响应
-	c.JSON(http.StatusOK, "成功")
+	ResponseSuccess(c, nil)
 }
 
 func LoginHandler(c *gin.Context) {
@@ -63,26 +63,22 @@ func LoginHandler(c *gin.Context) {
 		// 判断err是不是validator.ValidationErrors类型
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			"msg": errs.Translate(trans), // 翻译错误
-		})
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		return
 	}
 	// 2. 业务逻辑处理
 	if err := logic.Login(p); err != nil {
-		zap.L().Error("logic.Login failed", zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "用户名或密码错误",
-		})
+		zap.L().Error("logic.Login failed", zap.String("username", p.Username))
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExist)
+			return
+		}
+		ResponseError(c, CodeInvalidPassword)
+		return
 	}
 	// 3. 返回响应
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "登陆成功",
-	})
-
+	ResponseSuccess(c, nil)
 }
